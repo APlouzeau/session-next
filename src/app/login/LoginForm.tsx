@@ -6,10 +6,9 @@ import { LoginAction } from "./LoginAction";
 export default function LoginForm() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [feedback];
 
     const handle = async (formData: FormData) => {
-        const data = await LoginAction(formData);
+        await LoginAction(formData);
     };
 
     return (
