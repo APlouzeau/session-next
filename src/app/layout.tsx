@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 };
 
 const session = await getSession();
-console.log("layout cookie : ", session);
+console.log("layout cookie : ", session.get("session")?.value);
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
